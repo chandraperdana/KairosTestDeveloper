@@ -1,0 +1,30 @@
+﻿@model Barang
+
+<form method="post" asp-action="Delete">
+    <input asp-for="Id" type="hidden" />
+    <div class="row">
+        <h3>Hapus Barang</h3>
+        <br />
+        <br />
+    </div>
+    @*<div asp-validation-summary="All"></div>*@
+    <div class="mb-3">
+        <label asp-for="Nama_Barang"></label>
+        <input asp-for="Nama_Barang" class="form-control" readonly />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Kode_Barang"></label>
+        <input asp-for="Kode_Barang" class="form-control" readonly />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Jumlah_Barang"></label>
+        <input asp-for="Jumlah_Barang" class="form-control" readonly />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Tanggal"></label>
+        <input asp-for="Tanggal" class="form-control" id="datepicker" type="text" readonly/>
+    </div>
+    <button type="submit" class="btn btn-danger" style="width: 150px;">Hapus</button>
+    <a asp-controller="Barang" asp-action="index" class="btn btn-primary" style="width: 150px;">Kembali</a>
+</form>
+
